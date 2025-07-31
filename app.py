@@ -219,5 +219,5 @@ if st.button("Send") and user_input:
 if st.session_state.step == "greet" and not any(msg["role"] == "assistant" for msg in st.session_state.chat_history):
     st.session_state.step = "get_profile"
     next_q = get_next_profile_question(st.session_state.candidate_info)
-    ask_question("Hello! I'm your AI hiring assistant. Let's begin with your full.")
+    ask_question("Hello! I'm your AI hiring assistant. Let's begin with your full Name.")
     ask_question(next_q)
